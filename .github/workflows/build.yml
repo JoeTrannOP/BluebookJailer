@@ -11,12 +11,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '4.8.x'
-
     - name: Build solution
       run: |
         cd BluebookJailer
-        dotnet build -c Release
+        msbuild BluebookJailer.csproj /p:Configuration=Release
