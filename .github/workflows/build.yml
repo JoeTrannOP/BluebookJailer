@@ -22,7 +22,7 @@ jobs:
         dotnet build -c Release
 
     - name: Upload EXE
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: BluebookJailer
         path: BluebookJailer/bin/Release/net48/BluebookJailer.exe
