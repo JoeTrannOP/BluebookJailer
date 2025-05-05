@@ -11,7 +11,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build solution
+    - name: Build solution using dotnet
       run: |
         cd BluebookJailer
-        msbuild BluebookJailer.csproj /p:Configuration=Release
+        dotnet build BluebookJailer.csproj -c Release
